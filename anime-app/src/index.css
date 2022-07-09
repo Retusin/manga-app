@@ -3,7 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
-  margin: 0;
+  min-height: 100vh;
+}
+body {
   font-family: 'Space Grotesk', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

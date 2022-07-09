@@ -1,8 +1,12 @@
+import {Routes, Route} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+
 function App() {
   return (
-    <div className="h-screen flex items-center justify-center font-semibold text-3xl">
-      {' '}
-      Тут будет сайт про аниме 🧡
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
