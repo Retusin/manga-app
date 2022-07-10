@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import Hero from '../components/Hero/Hero';
+import MangaSlider from './../components/MangaSlider/MangaSlider';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <MangaSlider />
     </div>
   );
 }
