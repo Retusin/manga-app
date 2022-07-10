@@ -24,10 +24,10 @@ const Header = () => {
             </h3>
           </Link>
         </div>
-        <ul className="flex gap-5">
+        <ul className="flex gap-5 mr-auto ml-10 items-center">
           {navbar.map(item => (
             <Link key={item.name} href={item.path}>
-              <li className="hover:text-pink-400 duration-100 transition ease-in-out cursor-pointer uppercase">
+              <li className="hover:text-pink-400 duration-100 text-[14px] transition ease-in-out cursor-pointer uppercase">
                 {item.name}
               </li>
             </Link>
