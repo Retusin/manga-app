@@ -1,5 +1,5 @@
 import React from 'react';
-import {Zoom} from 'react-slideshow-image';
+import {Slide, Zoom} from 'react-slideshow-image';
 
 import 'react-slideshow-image/dist/styles.css';
 import Image from 'next/image';
@@ -37,7 +37,7 @@ const MangaSlider = () => {
     <div className="container">
       <div className="my-10">
         <h1 className="text-center text-3xl font-semibold mb-6">Posters</h1>
-        <Zoom {...zoomInProperties}>
+        <Slide {...zoomInProperties}>
           {images.map((each, i) => (
             <div key={i} className="flex justify-center w-full h-full">
               <Image
@@ -49,7 +49,7 @@ const MangaSlider = () => {
               />
             </div>
           ))}
-        </Zoom>
+        </Slide>
       </div>
     </div>
   );
