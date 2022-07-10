@@ -15,9 +15,10 @@ const MangaSlider = () => {
   const zoomInProperties = {
     indicators: true,
     scale: 1.2,
-    duration: 5000,
+    duration: 3000,
     transitionDuration: 500,
     infinity: true,
+    autoplay: true,
 
     prevArrow: (
       <div style={{width: '20px', marginRight: '0px', cursor: 'pointer'}}>
