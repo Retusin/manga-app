@@ -6,10 +6,10 @@ import heroImg from '../../assets/images/heroImg.png';
 
 const Hero = () => {
   return (
-    <div className="h-screen px-4 my-10">
-      <div className="text-center">
+    <div className="h-screen px-4 w-full flex items-center justify-center">
+      <div className="text-center block flex items-center justify-between flex-col">
         <Image className="mb-4" src={heroImg} width="300px" height="400px" alt="hero" />
-        <div>
+        <div className="mx-auto">
           <h1 className="text-4xl mb-4 font-semibold">
             Your <span className="text-pink-500">manga</span> online legally and without ads
           </h1>
