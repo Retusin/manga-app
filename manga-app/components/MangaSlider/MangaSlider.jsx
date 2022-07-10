@@ -1,6 +1,5 @@
 import React from 'react';
 import {Zoom} from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
 import Image from 'next/image';
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
 

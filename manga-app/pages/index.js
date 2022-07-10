@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import Hero from '../components/Hero/Hero';
 import MangaSlider from './../components/MangaSlider/MangaSlider';
+import 'react-slideshow-image/dist/styles.css';
 
 export default function Home() {
   return (
