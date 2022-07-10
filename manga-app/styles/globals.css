@@ -1,19 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,italic,500,500italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #15161e;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #cf1c6a;
-}
 
 html,
 body {
@@ -22,12 +11,12 @@ body {
   min-height: 100vh;
 }
 body {
+  font-family: 'Nunito', sans-serif;
   display: flex;
-  font-family: 'DM Sans', sans-serif;
-  color: #fff;
-  background-color: #15161e;
   flex-direction: column;
   height: 100vh;
+  background-color: #151018;
+  color: #fff;
 }
 
 .wrapper {
