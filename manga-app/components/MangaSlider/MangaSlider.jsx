@@ -16,8 +16,8 @@ const MangaSlider = () => {
   const zoomInProperties = {
     indicators: true,
     scale: 1.2,
-    duration: 3000,
-    transitionDuration: 500,
+    duration: 5000,
+    transitionDuration: 1000,
     infinity: true,
     autoplay: true,
 
