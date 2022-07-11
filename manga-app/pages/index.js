@@ -3,8 +3,9 @@ import Head from 'next/head';
 import Hero from '../components/Hero/Hero';
 import MangaSlider from './../components/MangaSlider/MangaSlider';
 import MangaTop from './../components/MangaTop/MangaTop';
+import AnimeTop from './../components/AnimeTop/AnimeTop';
 
-export default function Home({manga}) {
+export default function Home({manga, anime}) {
   return (
     <div>
       <Head>
@@ -16,6 +17,7 @@ export default function Home({manga}) {
         <Hero />
         <MangaSlider />
         <MangaTop manga={manga} />
+        <AnimeTop anime={anime} />
       </div>
     </div>
   );
@@ -24,9 +26,12 @@ export default function Home({manga}) {
 export async function getServerSideProps() {
   const request = await fetch('https://api.jikan.moe/v4/top/anime').then(res => res.json());
 
+  const req = await fetch('https://api.jikan.moe/v4/top/manga').then(res => res.json());
+
   return {
     props: {
       manga: request,
+      anime: req,
     },
   };
 }
