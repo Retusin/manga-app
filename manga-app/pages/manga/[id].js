@@ -22,7 +22,7 @@ export const getStaticProps = async context => {
   const id = context.params.id;
   const respons = await fetch(`https://api.jikan.moe/v4/manga/${id}/full`);
   const data = await respons.json();
-
+  console.log(data);
   return {
     props: {
       manga: data,
