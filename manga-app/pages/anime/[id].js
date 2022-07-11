@@ -58,7 +58,7 @@ const Details = ({anime}) => {
           <div className=" rounded-xl max-h-[500px]">
             <Image
               className="rounded-xl"
-              src={anime.data.images.jpg.large_image_url}
+              src={anime.data?.images.jpg.large_image_url}
               width="500"
               height="500"
               alt="Anime"
