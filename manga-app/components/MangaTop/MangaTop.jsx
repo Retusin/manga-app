@@ -20,7 +20,7 @@ const MangaTop = ({manga}) => {
   return (
     <div className="container">
       <div className="my-[80px]">
-        <h2 className="w-56 mb-8 cursor-pointer text-sm font-semibold md:text-2xl">Top Manga</h2>
+        <h2 className="w-56 mb-8 cursor-pointer text-sm font-semibold md:text-2xl">Top Anime</h2>
         <div className="relative group md:-ml-2">
           <AiOutlineArrowLeft
             onClick={() => handleClick('left')}

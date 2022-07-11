@@ -5,7 +5,7 @@ const HeaderButton = ({title, bg, path}) => {
   return (
     <Link href={`${path}`}>
       <button>
-        <div className={`py-1 px-2 ${bg}`}>{title}</div>
+        <div className={`py-1 px-2 ${bg} rounded-xl`}>{title}</div>
       </button>
     </Link>
   );
