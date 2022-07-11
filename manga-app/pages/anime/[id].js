@@ -54,7 +54,7 @@ const Details = ({anime}) => {
                 <span>{anime.data?.score}</span>
               </div>
             </div>
-            <p className="font-semibold">{anime.data?.synopsis}</p>
+            <div className="font-semibold">{anime.data?.synopsis}</div>
           </div>
           <div className=" rounded-xl max-h-[500px]">
             <Image

@@ -32,8 +32,8 @@ const MangaTop = ({manga}) => {
             ref={rowRef}
             className="flex items-center space-x-2.5 scrollbar-hide overflow-x-scroll md:space-x-4 md:-2"
           >
-            {manga.data.map(manga => (
-              <Thumbnail key={manga.mul_id} manga={manga} />
+            {manga.data.map((mang, i) => (
+              <Thumbnail key={mang.title} manga={mang} />
             ))}
           </div>
           <AiOutlineArrowRight

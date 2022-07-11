@@ -22,7 +22,6 @@ export const getStaticProps = async context => {
   const id = context.params.id;
   const respons = await fetch(`https://api.jikan.moe/v4/manga/${id}/full`);
   const data = await respons.json();
-  console.log(data);
   return {
     props: {
       manga: data,
@@ -49,7 +48,7 @@ const Details = ({manga}) => {
                 <span>{manga.data?.score}</span>
               </div>
             </div>
-            <p className="font-semibold">{manga.data?.synopsis}</p>
+            <div className="font-semibold">{manga.data?.synopsis}</div>
           </div>
           <div className=" rounded-xl max-h-[500px]">
             <Image
