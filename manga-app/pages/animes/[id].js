@@ -61,7 +61,7 @@ const Animes = ({anime}) => {
               layout="fill"
               alt="/"
             />
-            <div className="absolute top-0 left-0 right-0 bottom-0 z-[-1] bg-black/60" />
+            <div className="absolute top-0 left-0 right-0 bottom-0 z-[-1] bg-black/75" />
           </div>
         </div>
       </div>
