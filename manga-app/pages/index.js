@@ -1,11 +1,11 @@
 import Head from 'next/head';
 
 import Hero from '../components/Hero/Hero';
+import Trending from '../components/Trending/Trending';
+import TrendingManga from '../components/TrendingManga/TrendingManga';
 import MangaSlider from './../components/MangaSlider/MangaSlider';
-import MangaTop from './../components/MangaTop/MangaTop';
-import AnimeTop from './../components/AnimeTop/AnimeTop';
 
-export default function Home({manga, anime}) {
+export default function Home({anime, manga}) {
   return (
     <div>
       <Head>
@@ -16,22 +16,23 @@ export default function Home({manga, anime}) {
       <div>
         <Hero />
         <MangaSlider />
-        <MangaTop manga={manga} />
-        <AnimeTop anime={anime} />
+        <Trending anime={anime} />
+        <TrendingManga manga={manga} />
       </div>
     </div>
   );
 }
 
-export async function getServerSideProps() {
-  const request = await fetch('https://api.jikan.moe/v4/top/anime').then(res => res.json());
-
-  const req = await fetch('https://api.jikan.moe/v4/top/manga').then(res => res.json());
+export const getStaticProps = async () => {
+  const anime = await fetch('https://kitsu.io/api/edge/trending/anime');
+  const manga = await fetch('https://kitsu.io/api/edge/trending/manga');
+  const animeData = await anime.json();
+  const mangaData = await manga.json();
 
   return {
     props: {
-      manga: request,
-      anime: req,
+      anime: animeData,
+      manga: mangaData,
     },
   };
-}
+};
