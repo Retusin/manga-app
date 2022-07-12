@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Head from 'next/head';
+import {AiFillStar} from 'react-icons/ai';
 
 export const getStaticPaths = async () => {
   const res = await fetch('https://kitsu.io/api/edge/trending/anime');
@@ -45,7 +46,12 @@ const Animes = ({anime}) => {
               {anime.data.attributes.titles.ja_jp}
             </span>
             <h2 className="my-3 text-3xl font-bold">{anime.data.attributes.titles.en_jp}</h2>
-            <p className="mb-3">{anime.data.attributes.averageRating}</p>
+            <div className=" my-2 flex item-center gap-2">
+              <span>
+                <AiFillStar size={20} color="#ffd700" />
+              </span>
+              {anime.data.attributes.averageRating} %
+            </div>
             <p className="mb-3 font-semibold">{anime.data.attributes.synopsis}</p>
           </div>
           <div>

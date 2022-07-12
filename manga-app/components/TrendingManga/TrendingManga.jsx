@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
 import Link from 'next/link';
+import {BsFillBookFill} from 'react-icons/bs';
 
 const TrendingManga = ({manga}) => {
   const rowRef = React.useRef(null);
@@ -30,17 +31,17 @@ const TrendingManga = ({manga}) => {
           />
           <div
             ref={rowRef}
-            className="flex relative group gap-x-5 items-center scrollbar-hide overflow-x-scroll"
+            className="flex relative  gap-x-5 items-center scrollbar-hide overflow-x-scroll"
           >
             {manga.data.map(item => (
-              <Link key={item.id} href="/mangas/:id">
-                <div className="h-[220px] min-w-[200px]">
+              <Link key={item.id} href={`/mangas/${item.id}`}>
+                <div className="h-[220px] min-w-[200px] relative cursor-pointer">
                   <Image
                     src={item.attributes.posterImage.original}
                     alt="/"
                     className="rounded object-cover"
-                    width={200}
-                    height={200}
+                    width={290}
+                    height={300}
                   />
                 </div>
               </Link>

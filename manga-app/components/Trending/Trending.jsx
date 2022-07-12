@@ -33,7 +33,7 @@ const Trending = ({anime}) => {
           >
             {anime.data.map(item => (
               <Link key={item.id} href={`/animes/${item.id}`}>
-                <div className="h-[220px] min-w-[200px]">
+                <div className="h-[220px] relative min-w-[200px] cursor-pointer">
                   <Image
                     src={item.attributes.posterImage.original}
                     alt="/"
