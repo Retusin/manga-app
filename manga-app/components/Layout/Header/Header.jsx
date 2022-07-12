@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <div className="py-3 px-10 bg-[#231b27]">
+    <div className="py-3 px-10 bg-[#231b27] relative z-[100]">
       <div className="flex items-center justify-between">
         <div>
           <Link href="/">

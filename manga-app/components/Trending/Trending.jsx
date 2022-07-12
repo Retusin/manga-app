@@ -38,8 +38,8 @@ const Trending = ({anime}) => {
                     src={item.attributes.posterImage.original}
                     alt="/"
                     className="rounded object-cover"
-                    width={200}
-                    height={200}
+                    width={290}
+                    height={300}
                   />
                 </div>
               </Link>
