@@ -1,6 +1,6 @@
 import Layout from '../components/Layout/Layout';
 import 'react-slideshow-image/dist/styles.css';
-import '../styles/globals.css';
+import '../assets/styles/globals.css';
 
 function MyApp({Component, pageProps}) {
   return (
