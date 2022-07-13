@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import {AiFillStar} from 'react-icons/ai';
+import ReactPlayer from 'react-player';
 
 export const getStaticPaths = async () => {
   const res = await fetch('https://kitsu.io/api/edge/trending/anime');
@@ -41,18 +42,20 @@ const Animes = ({anime}) => {
       </Head>
       <div className="px-20 my-10 h-full w-full ">
         <div className="z-[20]">
-          <div className="max-w-[500px] mb-10 md:mb-0">
-            <span className="font-semibold text-pink-400">
-              {anime.data.attributes.titles.ja_jp}
-            </span>
-            <h2 className="my-3 text-3xl font-bold">{anime.data.attributes.titles.en_jp}</h2>
-            <div className=" my-2 flex item-center gap-2">
-              <span>
-                <AiFillStar size={20} color="#ffd700" />
+          <div>
+            <div className="z-[50] max-w-[500px] mb-10 md:mb-0">
+              <span className="font-semibold text-pink-400">
+                {anime.data.attributes.titles.ja_jp}
               </span>
-              {anime.data.attributes.averageRating} %
+              <h2 className="my-3 text-3xl font-bold">{anime.data.attributes.titles.en_jp}</h2>
+              <div className=" my-2 flex item-center gap-2">
+                <span>
+                  <AiFillStar size={20} color="#ffd700" />
+                </span>
+                {anime.data.attributes.averageRating} %
+              </div>
+              <p className="mb-3 font-semibold">{anime.data.attributes.synopsis}</p>
             </div>
-            <p className="mb-3 font-semibold">{anime.data.attributes.synopsis}</p>
           </div>
           <div>
             <Image

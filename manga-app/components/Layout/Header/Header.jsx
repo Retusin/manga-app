@@ -3,6 +3,7 @@ import React from 'react';
 
 import HeaderButton from './HeaderButton';
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
+import Modal from './../../Modal/Modal';
 
 const navbar = [
   {
@@ -17,13 +18,14 @@ const navbar = [
 
 const Header = () => {
   const [nav, setNav] = React.useState(false);
+  const [modalActive, setModalActive] = React.useState(true);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   return (
-    <div className="py-3 px-10 bg-[#231b27] relative z-[100]">
+    <div className="py-3 px-10 bg-[#13142ba3] z-[100]">
       <div className="flex items-center justify-between">
         <div>
           <Link href="/">
@@ -55,8 +57,8 @@ const Header = () => {
         <ul
           className={
             nav
-              ? 'absolute w-full h-full bg-black z-10 flex items-center justify-center flex-col gap-10 top-0 left-0 right-0 bottom-0'
-              : 'absolute w-full h-full bg-black z-10 flex items-center justify-center flex-col gap-10 top-0 left-[-100%] right-0 bottom-0'
+              ? 'absolute w-full h-screen bg-black z-10 flex items-center justify-center flex-col gap-10 top-0 left-0 right-0 bottom-0'
+              : 'absolute w-full h-screen bg-black z-10 flex items-center justify-center flex-col gap-10 top-0 left-[-100%] right-0 bottom-0'
           }
         >
           {navbar.map(item => (
@@ -72,6 +74,7 @@ const Header = () => {
           </div>
         </ul>
       </div>
+      {/* <Modal activeModal={activeModal} setModalActive={setModalActive} /> */}
     </div>
   );
 };

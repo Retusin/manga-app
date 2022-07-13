@@ -57,11 +57,11 @@ const Mangas = ({manga}) => {
           <div>
             <Image
               src={manga.data.attributes.posterImage.original}
-              className="rounded-xl"
-              width="400px"
-              height="400px"
+              className="object-cover absolute top-0 left- z-[-2] "
+              layout="fill"
               alt="Poster"
             />
+            <div className="absolute top-0 left-0 right-0 bottom-0 z-[-1] bg-black/75" />
           </div>
         </div>
       </div>
