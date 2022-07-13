@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="h-screen px-4 w-full flex items-center justify-center">
       <div className="text-center  flex items-center justify-between flex-col">
-        <Image className="mb-4" src={heroImg} width="367px" height="512px" alt="hero" />
+        <Image className="mb-4" src={heroImg} width="328px" height="458px" alt="hero" />
         <div className="mx-auto">
           <h1 className="text-4xl mb-4 font-semibold">
             Your <span className="text-pink-500">manga</span> online legally and without ads
