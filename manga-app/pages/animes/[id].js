@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import {AiFillStar} from 'react-icons/ai';
-import ReactPlayer from 'react-player';
 
 export const getStaticPaths = async () => {
   const res = await fetch('https://kitsu.io/api/edge/trending/anime');
