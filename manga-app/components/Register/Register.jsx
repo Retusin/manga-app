@@ -1,8 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
-
-import loginBg from '/assets/images/register.jpg';
 
 const Register = () => {
   return (
@@ -30,7 +27,6 @@ const Register = () => {
           </button>
         </from>
       </div>
-      <Image src={loginBg} layout="fill" alt="bg" />
     </div>
   );
 };
