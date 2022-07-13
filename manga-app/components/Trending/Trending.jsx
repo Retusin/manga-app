@@ -32,10 +32,10 @@ const Trending = ({anime}) => {
             className="flex relative group gap-x-5 items-center scrollbar-hide overflow-x-scroll"
           >
             {anime.data.map(item => (
-              <Link key={item.mal_id} href={`/animes/${item.mal_id}`}>
+              <Link key={item.id} href={`/animes/${item.id}`}>
                 <div className="h-[220px] relative min-w-[200px] cursor-pointer">
                   <Image
-                    src={item.images.jpg.image_url}
+                    src={item.attributes.posterImage.original}
                     alt="/"
                     className="rounded object-cover"
                     width={290}
