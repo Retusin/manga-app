@@ -68,5 +68,5 @@ a {
 }
 
 .register {
-  background-image: url('../assets/images/register.jpg');
+  background-image: url('/public/register.jpg');
 }
