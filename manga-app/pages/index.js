@@ -24,12 +24,10 @@ export default function Home({anime, manga}) {
 }
 
 export const getStaticProps = async () => {
-  const anime = await fetch('https://api.jikan.moe/v4/top/anime');
+  const anime = await fetch('https://kitsu.io/api/edge/trending/anime');
   const manga = await fetch('https://kitsu.io/api/edge/trending/manga');
   const animeData = await anime.json();
   const mangaData = await manga.json();
-
-  console.log(animeData);
 
   return {
     props: {
