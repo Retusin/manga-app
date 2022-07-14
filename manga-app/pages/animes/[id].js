@@ -3,7 +3,7 @@ import Head from 'next/head';
 import {AiFillStar, AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
 import React from 'react';
 
-export const getStaticPaths = async () => {
+export const getServerSidePaths = async () => {
   const res = await fetch('https://api.jikan.moe/v4/top/anime');
   const data = await res.json();
 
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async context => {
+export const getServerSideProps = async context => {
   const id = context.params.id;
   const res = await fetch(`https://api.jikan.moe/v4/anime/${id}`);
   const characterRes = await fetch(`https://api.jikan.moe/v4/anime/${id}/characters`);
