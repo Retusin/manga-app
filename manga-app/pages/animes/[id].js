@@ -101,7 +101,7 @@ const Animes = ({anime, characters}) => {
                 className="h-[260px] min-w-[200px] relative cursor-pointer bg-cover bg-center bg-no-repeat"
               >
                 <Image
-                  src={item.character?.images.jpg.image_url}
+                  src={item.character?.images?.jpg.image_url}
                   alt="/"
                   className="rounded-xl"
                   width="200"
