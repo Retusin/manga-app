@@ -35,15 +35,10 @@ const TrendingManga = ({manga}) => {
           >
             {manga.data.map(item => (
               <Link key={item.id} href={`/mangas/${item.id}`}>
-                <div className="h-[220px] min-w-[200px] relative cursor-pointer">
-                  <Image
-                    src={item.attributes.posterImage.original}
-                    alt="/"
-                    className="rounded object-cover"
-                    width={290}
-                    height={300}
-                  />
-                </div>
+                <div
+                  className="h-[220px] min-w-[200px] relative cursor-pointer bg-cover bg-center bg-no-repeat"
+                  style={{backgroundImage: `url(${item.attributes.posterImage.small})`}}
+                />
               </Link>
             ))}
           </div>
