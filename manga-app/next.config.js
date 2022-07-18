@@ -5,6 +5,6 @@ const nextConfig = {
   images: {
     domains: ['cdn.myanimelist.net', 'media.kitsu.io', 'img.youtube.com'],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

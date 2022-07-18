@@ -1,18 +1,13 @@
-import React from 'react';
-import {Slide} from 'react-slideshow-image';
+import React from 'react'
+import { Slide } from 'react-slideshow-image'
+import Image from 'next/image'
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
-import 'react-slideshow-image/dist/styles.css';
-import Image from 'next/image';
-import {AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
+import { images } from '../../utils/data'
 
-import image1 from '../../assets/images/slider-1.jpg';
-import image2 from '../../assets/images/slider-2.jpg';
-import image3 from '../../assets/images/slider-3.jpg';
-import image4 from '../../assets/images/slider-4.jpg';
+import 'react-slideshow-image/dist/styles.css'
 
-const MangaSlider = () => {
-  const images = [image1, image2, image3, image4];
-
+function MangaSlider() {
   const zoomInProperties = {
     indicators: true,
     scale: 1.2,
@@ -22,27 +17,33 @@ const MangaSlider = () => {
     autoplay: true,
 
     prevArrow: (
-      <div style={{width: '20px', marginRight: '0px', cursor: 'pointer'}}>
+      <div style={{ width: '20px', marginRight: '0px', cursor: 'pointer' }}>
         <AiOutlineArrowLeft size={25} className="text-pink-500" />
       </div>
     ),
 
     nextArrow: (
-      <div style={{width: '-20px', marginRight: '0px', cursor: 'pointer'}}>
+      <div
+        style={{
+          width: '-20px',
+          marginRight: '0px',
+          cursor: 'pointer',
+        }}
+      >
         <AiOutlineArrowRight size={25} className="text-pink-500" />
       </div>
     ),
-  };
+  }
   return (
     <div className="container">
       <div className="my-10">
-        <h1 className="text-center text-3xl font-semibold mb-6">Posters</h1>
+        <h1 className="mb-6 text-center text-3xl font-semibold">Posters</h1>
         <Slide {...zoomInProperties}>
-          {images.map((each, i) => (
-            <div key={i} className="flex justify-center w-full h-full">
+          {images.map((each) => (
+            <div key={each.id} className="flex h-full w-full justify-center">
               <Image
-                src={each}
-                className="w-3/4 object-cover rounded-xl"
+                src={each.image}
+                className="w-3/4 rounded-xl object-cover"
                 width="600px"
                 height="600px"
                 alt="slider"
@@ -52,7 +53,7 @@ const MangaSlider = () => {
         </Slide>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MangaSlider;
+export default MangaSlider
