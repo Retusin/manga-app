@@ -24,7 +24,7 @@ export default function Home({ anime, manga }) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const anime = await fetch('https://api.jikan.moe/v4/top/anime')
   const manga = await fetch('https://api.jikan.moe/v4/top/manga')
   const animeData = await anime.json()
